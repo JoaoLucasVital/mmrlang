@@ -136,7 +136,7 @@ compilador-av2/
 Clone o repositório:
 
 ```bash
-git clone LINK_DO_REPOSITORIO
+git clone https://github.com/JoaoLucasVital/mmrlang
 ```
 
 Entre na pasta do projeto:
