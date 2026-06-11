@@ -1,0 +1,598 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{
+a4paper,
+top=3cm,
+bottom=2cm,
+left=3cm,
+right=2cm
+}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+
+\lstset{
+basicstyle=\ttfamily\small,
+breaklines=true,
+frame=single,
+numbers=left,
+numberstyle=\tiny,
+showstringspaces=false,
+columns=fullflexible
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+
+```
+{\large UNINASSAU\par}
+\vspace{0.5cm}
+{\large CURSO DE CIÊNCIA DA COMPUTAÇÃO\par}
+\vspace{0.5cm}
+{\large DISCIPLINA: COMPILADORES\par}
+
+\vfill
+
+{\bfseries\Large RELATÓRIO TÉCNICO\par}
+\vspace{0.5cm}
+{\bfseries\Large COMPILADOR E INTERPRETADOR DA LINGUAGEM MMRLANG\par}
+
+\vfill
+
+{\large Integrantes:\par}
+\vspace{0.3cm}
+
+{\small Adriano Mikhael M L Cavalcante -- 01605455 -- \url{https://github.com/AdrianoMikhael}\par}
+{\small João Lucas Vital -- 01624753 -- \url{https://github.com/JoaoLucasVital}\par}
+{\small Lucas Soares Silva -- 01631745 -- \url{https://github.com/lqnhs1}\par}
+
+\vfill
+
+{\large Maceió\par}
+{\large 2026\par}
+```
+
+\end{titlepage}
+
+\begin{titlepage}
+\centering
+
+```
+{\large Adriano Mikhael M L Cavalcante -- 01605455\par}
+{\large João Lucas Vital -- 01624753\par}
+{\large Lucas Soares Silva -- 01631745\par}
+
+\vfill
+
+{\bfseries\Large COMPILADOR E INTERPRETADOR DA LINGUAGEM MMRLANG\par}
+
+\vspace{3cm}
+
+\begin{flushright}
+\begin{minipage}{8cm}
+Relatório técnico apresentado à disciplina de Compiladores como requisito avaliativo da AV2, com o objetivo de demonstrar o desenvolvimento de um compilador e interpretador simples, utilizando versionamento no GitHub e documentação em LaTeX.
+\end{minipage}
+\end{flushright}
+
+\vfill
+
+{\large Maceió\par}
+{\large 2026\par}
+```
+
+\end{titlepage}
+
+\section{Resumo}
+
+Este relatório apresenta o desenvolvimento da MMRLang, uma linguagem de programação educacional criada para demonstrar conceitos fundamentais da disciplina de Compiladores.
+
+O projeto consiste em um compilador e interpretador simples, desenvolvido em Python, capaz de ler arquivos com extensão .mmr, interpretar comandos próprios da linguagem, armazenar variáveis, avaliar expressões, executar estruturas condicionais, realizar repetições e apresentar mensagens de erro.
+
+Além do desenvolvimento do interpretador, o projeto também utiliza documentação em LaTeX, edição por meio da IDE Texmaker, compilação com MiKTeX e versionamento do código no GitHub com colaboração entre os integrantes.
+
+\section{Introdução}
+
+A disciplina de Compiladores estuda os processos utilizados para analisar, interpretar ou transformar códigos escritos em uma linguagem de programação. Esses processos envolvem etapas como leitura do código-fonte, identificação de comandos, avaliação de expressões, execução de instruções e tratamento de erros.
+
+Neste trabalho, foi desenvolvida a MMRLang, uma linguagem criada pela equipe com comandos próprios e sintaxe em português. A linguagem foi pensada para ser simples, didática e levemente descontraída, mas mantendo conceitos importantes presentes em linguagens reais.
+
+O interpretador foi desenvolvido em Python, por ser uma linguagem de fácil leitura e adequada para projetos acadêmicos. O relatório foi produzido em LaTeX, utilizando o MiKTeX como compilador tipográfico e o Texmaker como ambiente de edição.
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+Desenvolver um compilador e interpretador simples para uma linguagem própria, aplicando conceitos estudados na disciplina de Compiladores e documentando o projeto em LaTeX.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+\item Criar uma linguagem de programação educacional chamada MMRLang;
+\item Desenvolver um interpretador em Python;
+\item Implementar variáveis, saída de dados, condições e repetições;
+\item Permitir a execução de arquivos com extensão .mmr;
+\item Tratar erros comuns encontrados no código-fonte;
+\item Organizar programas de teste em arquivos separados;
+\item Versionar o projeto no GitHub;
+\item Produzir relatório técnico em LaTeX.
+\end{itemize}
+
+\section{Significado da MMRLang}
+
+O nome MMRLang é formado por duas partes: MMR e Lang.
+
+A sigla MMR representa a identidade escolhida pela equipe para a linguagem. Já o termo Lang é uma abreviação da palavra inglesa language, que significa linguagem.
+
+Portanto, MMRLang pode ser entendida como Linguagem MMR.
+
+A proposta da linguagem é unir uma estrutura lógica de programação com comandos simples, em português e com uma identidade própria.
+
+\section{Principais Características}
+
+A MMRLang possui as seguintes características:
+
+\begin{itemize}
+\item Sintaxe simples e em português;
+\item Arquivos com extensão .mmr;
+\item Interpretador desenvolvido em Python;
+\item Comandos próprios e fáceis de entender;
+\item Suporte a variáveis;
+\item Suporte a textos, números e valores lógicos;
+\item Suporte a operações matemáticas;
+\item Suporte a estruturas condicionais;
+\item Suporte a estruturas de repetição;
+\item Tratamento de erros com mensagens claras;
+\item Testes separados por arquivos.
+\end{itemize}
+
+\section{Tecnologias Utilizadas}
+
+\subsection{Python}
+
+Python foi utilizado para desenvolver o interpretador da MMRLang. A escolha ocorreu por sua sintaxe clara, facilidade de leitura de arquivos e boa aplicação em projetos acadêmicos.
+
+\subsection{LaTeX}
+
+LaTeX foi utilizado para escrever o relatório técnico do projeto. Ele permite criar documentos bem estruturados, com seções, sumário e blocos de código.
+
+\subsection{MiKTeX}
+
+O MiKTeX foi utilizado como compilador LaTeX. Ele é responsável por transformar o arquivo main.tex em um documento PDF.
+
+\subsection{Texmaker}
+
+O Texmaker foi utilizado como IDE para editar e compilar o relatório em LaTeX.
+
+\subsection{GitHub}
+
+O GitHub foi utilizado para versionamento do projeto e colaboração entre os integrantes da equipe.
+
+\section{Estrutura do Projeto}
+
+A estrutura do projeto foi organizada da seguinte forma:
+
+\begin{lstlisting}
+compilador-av2/
+|-- main.py
+|-- testes/
+|   |-- programa1.mmr
+|   |-- programa2.mmr
+|   |-- programa3.mmr
+|   |-- programa4.mmr
+|   |-- programa5.mmr
+|-- relatorio/
+|   |-- main.tex
+|-- README.md
+|-- .gitignore
+\end{lstlisting}
+
+\section{Comandos da MMRLang}
+
+A MMRLang usa comandos próprios para representar ações comuns em programação. Mesmo com nomes diferentes, esses comandos possuem funções semelhantes às de linguagens reais.
+
+\subsection{Lista de Comandos}
+
+\begin{itemize}
+\item guarda: cria ou altera uma variável. Equivalente a var, let ou atribuição.
+\item falaai: exibe uma informação na tela. Equivalente a print ou console.log.
+\item eai: inicia uma condição. Equivalente ao if.
+\item senaobicho: executa um bloco caso a condição seja falsa. Equivalente ao else.
+\item fimtrem: finaliza um bloco condicional.
+\item repete: repete um bloco de comandos. Equivalente a um laço de repetição.
+\item acaboupo: finaliza um bloco de repetição.
+\item verdadeiro: representa o valor lógico verdadeiro.
+\item falso: representa o valor lógico falso.
+\item e: representa o operador lógico E.
+\item ou: representa o operador lógico OU.
+\item nao: representa o operador lógico de negação.
+\end{itemize}
+
+\section{Explicação dos Nomes dos Comandos}
+
+\subsection{guarda}
+
+O comando guarda foi escolhido porque sua função é guardar um valor dentro de uma variável.
+
+\begin{lstlisting}
+guarda nome = "Maria";
+guarda idade = 20;
+\end{lstlisting}
+
+Nesse exemplo, a MMRLang guarda o texto Maria na variável nome e o número 20 na variável idade.
+
+\subsection{falaai}
+
+O comando falaai representa a saída de dados. Ele foi escolhido por ser uma forma simples e descontraída de indicar que o programa deve mostrar algo na tela.
+
+\begin{lstlisting}
+falaai "Ola, mundo!";
+falaai nome;
+\end{lstlisting}
+
+Esse comando funciona de maneira semelhante ao print em Python.
+
+\subsection{eai}
+
+O comando eai representa uma condição. Ele faz uma pergunta lógica ao programa.
+
+\begin{lstlisting}
+eai idade >= 18
+falaai "Maior de idade";
+senaobicho
+falaai "Menor de idade";
+fimtrem
+\end{lstlisting}
+
+A ideia é semelhante a perguntar se aquela condição é verdadeira. Se for verdadeira, o primeiro bloco é executado. Caso contrário, o bloco do senaobicho é executado.
+
+\subsection{senaobicho}
+
+O comando senaobicho representa o caso contrário de uma condição. Ele funciona como o else em outras linguagens de programação.
+
+\begin{lstlisting}
+eai nota >= 7
+falaai "Aprovado";
+senaobicho
+falaai "Recuperacao";
+fimtrem
+\end{lstlisting}
+
+\subsection{fimtrem}
+
+O comando fimtrem finaliza a estrutura condicional iniciada com eai. Ele indica ao interpretador que o bloco de condição terminou.
+
+\begin{lstlisting}
+eai idade >= 18
+falaai "Autorizado";
+senaobicho
+falaai "Negado";
+fimtrem
+\end{lstlisting}
+
+\subsection{repete}
+
+O comando repete executa um bloco de código várias vezes.
+
+\begin{lstlisting}
+repete 3
+falaai "MMRLang em execucao";
+acaboupo
+\end{lstlisting}
+
+Nesse caso, a mensagem será exibida três vezes.
+
+\subsection{acaboupo}
+
+O comando acaboupo finaliza um bloco de repetição iniciado com repete.
+
+\begin{lstlisting}
+repete 5
+falaai "Repetindo";
+acaboupo
+\end{lstlisting}
+
+\section{Operadores Suportados}
+
+A MMRLang suporta operadores matemáticos, operadores de comparação e operadores lógicos.
+
+\subsection{Operadores Matemáticos}
+
+\begin{itemize}
+\item Soma: sinal de mais.
+\item Subtração: sinal de menos.
+\item Multiplicação: asterisco.
+\item Divisão: barra.
+\item Resto da divisão: porcentagem.
+\end{itemize}
+
+\subsection{Operadores de Comparação}
+
+\begin{itemize}
+\item Igual.
+\item Diferente.
+\item Maior.
+\item Menor.
+\item Maior ou igual.
+\item Menor ou igual.
+\end{itemize}
+
+\subsection{Operadores Lógicos}
+
+\begin{itemize}
+\item e: operador lógico E.
+\item ou: operador lógico OU.
+\item nao: operador lógico de negação.
+\end{itemize}
+
+\section{Funcionamento do Interpretador}
+
+O interpretador da MMRLang executa as seguintes etapas:
+
+\begin{enumerate}
+\item Recebe o caminho de um arquivo .mmr;
+\item Verifica se o arquivo existe;
+\item Verifica se a extensão do arquivo é válida;
+\item Lê o conteúdo do arquivo linha por linha;
+\item Remove comentários, espaços desnecessários e ponto e vírgula final;
+\item Identifica os comandos da linguagem;
+\item Executa variáveis, saídas, condições e repetições;
+\item Avalia expressões matemáticas e lógicas;
+\item Exibe mensagens de erro caso encontre problemas.
+\end{enumerate}
+
+\section{Exemplo de Código em MMRLang}
+
+\begin{lstlisting}
+guarda nome = "Maria";
+guarda idade = 20;
+guarda nota = 8;
+
+falaai "Sistema MMR iniciado";
+falaai "Nome do aluno:";
+falaai nome;
+
+eai idade >= 18
+falaai "Usuario maior de idade";
+senaobicho
+falaai "Usuario menor de idade";
+fimtrem
+
+eai nota >= 7
+falaai "Aluno aprovado";
+senaobicho
+falaai "Aluno em recuperacao";
+fimtrem
+
+repete 3
+falaai "Finalizando processamento...";
+acaboupo
+
+falaai "Programa encerrado";
+\end{lstlisting}
+
+\section{Saída Esperada}
+
+\begin{lstlisting}
+Sistema MMR iniciado
+Nome do aluno:
+Maria
+Usuario maior de idade
+Aluno aprovado
+Finalizando processamento...
+Finalizando processamento...
+Finalizando processamento...
+Programa encerrado
+\end{lstlisting}
+
+\section{Programas de Teste}
+
+Os testes foram separados em arquivos diferentes dentro da pasta testes. Essa organização facilita a execução individual de cada funcionalidade da linguagem.
+
+\begin{itemize}
+\item programa1.mmr: testa variáveis e saída de dados.
+\item programa2.mmr: testa operações matemáticas.
+\item programa3.mmr: testa estrutura condicional.
+\item programa4.mmr: testa estrutura de repetição.
+\item programa5.mmr: testa um programa completo com variáveis, condições e repetição.
+\end{itemize}
+
+\section{Tratamento de Erros}
+
+O tratamento de erros é uma parte importante do interpretador da MMRLang. Ele permite que o programa identifique problemas no código-fonte e mostre mensagens mais claras para o usuário.
+
+\subsection{Erros Apresentados}
+
+\begin{itemize}
+\item Arquivo não encontrado: acontece quando o arquivo informado pelo usuário não existe.
+\item Extensão inválida: acontece quando o arquivo não possui extensão .mmr.
+\item Comando desconhecido: acontece quando é usado um comando que não existe na MMRLang.
+\item Variável não declarada: acontece quando uma variável é usada antes de ser criada.
+\item Nome de variável inválido: acontece quando o nome da variável não segue o formato permitido.
+\item Expressão vazia: acontece quando um comando precisa de valor, mas nenhum valor é informado.
+\item Erro no comando guarda: acontece quando a atribuição não utiliza o sinal de igual.
+\item Erro no comando eai: acontece quando a condição não é informada.
+\item Bloco eai não finalizado: acontece quando falta o comando fimtrem.
+\item Bloco repete não finalizado: acontece quando falta o comando acaboupo.
+\item Quantidade inválida no repete: acontece quando o valor da repetição não é um número inteiro.
+\item Repetição negativa: acontece quando a quantidade de repetições é menor que zero.
+\item Divisão por zero: acontece quando uma expressão tenta dividir um número por zero.
+\item Operador não suportado: acontece quando é usado um operador não permitido pela linguagem.
+\item Fechamento fora de bloco: acontece quando fimtrem, senaobicho ou acaboupo aparecem fora do local correto.
+\end{itemize}
+
+\subsection{Exemplos de Erros}
+
+\subsubsection{Variável não declarada}
+
+\begin{lstlisting}
+falaai nome;
+\end{lstlisting}
+
+Mensagem esperada:
+
+\begin{lstlisting}
+Erro MMR:
+[Linha 1] A variavel 'nome' nao foi declarada.
+\end{lstlisting}
+
+\subsubsection{Comando desconhecido}
+
+\begin{lstlisting}
+escreva "Ola";
+\end{lstlisting}
+
+Mensagem esperada:
+
+\begin{lstlisting}
+Erro MMR:
+[Linha 1] Comando desconhecido: escreva "Ola"
+\end{lstlisting}
+
+\subsubsection{Bloco condicional não finalizado}
+
+\begin{lstlisting}
+eai idade >= 18
+falaai "Maior de idade";
+\end{lstlisting}
+
+Mensagem esperada:
+
+\begin{lstlisting}
+Erro MMR:
+[Linha 1] Bloco 'eai' nao foi finalizado com 'fimtrem'.
+\end{lstlisting}
+
+\subsubsection{Bloco de repetição não finalizado}
+
+\begin{lstlisting}
+repete 3
+falaai "Executando";
+\end{lstlisting}
+
+Mensagem esperada:
+
+\begin{lstlisting}
+Erro MMR:
+[Linha 1] Bloco 'repete' nao foi finalizado com 'acaboupo'.
+\end{lstlisting}
+
+\section{Como Rodar o Projeto}
+
+Para executar o projeto, é necessário ter o Python instalado no computador.
+
+Primeiro, clone o repositório:
+
+\begin{lstlisting}
+git clone LINK_DO_REPOSITORIO
+\end{lstlisting}
+
+Depois, entre na pasta do projeto:
+
+\begin{lstlisting}
+cd compilador-av2
+\end{lstlisting}
+
+Execute o interpretador:
+
+\begin{lstlisting}
+python main.py
+\end{lstlisting}
+
+Após executar o interpretador, será solicitado o caminho do arquivo:
+
+\begin{lstlisting}
+Arquivo MMR:
+\end{lstlisting}
+
+Exemplo de arquivo para execução:
+
+\begin{lstlisting}
+testes/programa1.mmr
+\end{lstlisting}
+
+\section{Relatório em LaTeX}
+
+O relatório do projeto foi produzido em LaTeX, utilizando o compilador MiKTeX e a IDE Texmaker.
+
+O MiKTeX é responsável por compilar o arquivo main.tex e gerar o documento em PDF. Já o Texmaker foi utilizado como editor para escrever, organizar e compilar o relatório.
+
+\section{Versionamento no GitHub}
+
+O projeto foi versionado no GitHub para permitir organização, histórico de alterações e colaboração entre os integrantes.
+
+Todos os integrantes devem ser adicionados como colaboradores no repositório. Dessa forma, cada integrante pode contribuir com alterações no código, testes e documentação.
+
+\subsection{Exemplos de Commits}
+
+\begin{lstlisting}
+feat: cria interpretador inicial da MMRLang
+feat: adiciona comandos guarda e falaai
+feat: implementa estrutura condicional eai
+feat: implementa estrutura de repeticao repete
+docs: adiciona README do projeto
+docs: adiciona relatorio em LaTeX
+fix: corrige tratamento de erros
+test: adiciona programas de teste
+\end{lstlisting}
+
+\section{Uso de Inteligência Artificial}
+
+A inteligência artificial foi utilizada como ferramenta de apoio durante o desenvolvimento do projeto. Ela auxiliou na organização da estrutura do interpretador, na criação da sintaxe da linguagem, na elaboração dos exemplos de teste, na melhoria do tratamento de erros e na escrita da documentação.
+
+As sugestões fornecidas pela IA foram analisadas, testadas e adaptadas pela equipe, garantindo que o projeto atendesse aos requisitos da disciplina e fosse compreendido pelos integrantes.
+
+\section{Dificuldades Encontradas}
+
+Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas, como:
+
+\begin{itemize}
+\item Definir uma sintaxe própria para a linguagem;
+\item Organizar os blocos condicionais e de repetição;
+\item Criar mensagens de erro compreensíveis;
+\item Separar os testes por funcionalidade;
+\item Organizar o versionamento do código no GitHub;
+\item Adaptar o relatório ao formato LaTeX.
+\end{itemize}
+
+Essas dificuldades foram resolvidas por meio de testes, revisão do código e organização das responsabilidades entre os integrantes.
+
+\section{Integrantes}
+
+\begin{itemize}
+\item Adriano Mikhael M L Cavalcante -- 01605455 -- \url{https://github.com/AdrianoMikhael}
+\item João Lucas Vital -- 01624753 -- \url{https://github.com/JoaoLucasVital}
+\item Lucas Soares Silva -- 01631745 -- \url{https://github.com/lqnhs1}
+\end{itemize}
+
+\section{Conclusão}
+
+O desenvolvimento da MMRLang permitiu aplicar, na prática, conceitos importantes da disciplina de Compiladores. O projeto demonstrou como uma linguagem pode ser lida, interpretada e executada a partir de comandos definidos pela própria equipe.
+
+Apesar de simples, a MMRLang possui características fundamentais de uma linguagem de programação, como variáveis, expressões matemáticas, estruturas condicionais, laços de repetição e tratamento de erros.
+
+Além disso, o uso de LaTeX para a documentação e do GitHub para versionamento contribuiu para uma organização mais profissional do projeto, permitindo colaboração entre os integrantes e registro das etapas de desenvolvimento.
+
+\section{Referências}
+
+\begin{itemize}
+\item AHO, Alfred V.; LAM, Monica S.; SETHI, Ravi; ULLMAN, Jeffrey D. Compiladores: princípios, técnicas e ferramentas. Pearson, 2008.
+\item Python Software Foundation. Python Documentation. Disponível em: https://docs.python.org/3/.
+\item GitHub Docs. Disponível em: https://docs.github.com/.
+\item LaTeX Project. LaTeX Documentation. Disponível em: https://www.latex-project.org/help/documentation/.
+\item MiKTeX Documentation. Disponível em: https://miktex.org/docs.
+\item Texmaker Documentation. Disponível em: https://www.xm1math.net/texmaker/.
+\end{itemize}
+
+\end{document}

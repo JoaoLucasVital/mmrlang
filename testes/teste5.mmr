@@ -1,0 +1,32 @@
+// Teste 5 - Programa completo da MMRLang
+
+guarda nome = "Maria";
+guarda idade = 20;
+guarda pontos = 75;
+
+falaai "=== Programa 5 ===";
+falaai "Sistema de avaliacao MMR";
+
+falaai "Nome:";
+falaai nome;
+
+falaai "Idade:";
+falaai idade;
+
+eai idade >= 18
+    falaai "Usuario autorizado.";
+senaobicho
+    falaai "Usuario sem autorizacao.";
+fimtrem
+
+eai pontos >= 60
+    falaai "Resultado: aprovado.";
+senaobicho
+    falaai "Resultado: reprovado.";
+fimtrem
+
+repete 3
+    falaai "Finalizando processamento...";
+acaboupo
+
+falaai "Programa encerrado.";

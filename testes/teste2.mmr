@@ -1,0 +1,22 @@
+// Teste 2 - Operações matemáticas
+
+guarda numero1 = 10;
+guarda numero2 = 5;
+
+guarda soma = numero1 + numero2;
+guarda subtracao = numero1 - numero2;
+guarda multiplicacao = numero1 * numero2;
+guarda divisao = numero1 / numero2;
+
+falaai "=== Programa 2 ===";
+falaai "Resultado da soma:";
+falaai soma;
+
+falaai "Resultado da subtracao:";
+falaai subtracao;
+
+falaai "Resultado da multiplicacao:";
+falaai multiplicacao;
+
+falaai "Resultado da divisao:";
+falaai divisao;

@@ -1,0 +1,14 @@
+// Teste 3 - Estrutura condicional
+
+guarda aluno = "Joao";
+guarda nota = 8;
+
+falaai "=== Programa 3 ===";
+falaai "Aluno analisado:";
+falaai aluno;
+
+eai nota >= 7
+    falaai "Situacao: aprovado.";
+senaobicho
+    falaai "Situacao: recuperacao ou reprovado.";
+fimtrem

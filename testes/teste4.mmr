@@ -1,0 +1,8 @@
+// Teste 4 - Estrutura de repetição
+
+falaai "=== Programa 4 ===";
+falaai "Repetindo uma mensagem 5 vezes:";
+
+repete 5
+    falaai "MMRLang em execucao...";
+acaboupo

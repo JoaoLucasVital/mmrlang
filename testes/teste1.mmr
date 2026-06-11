@@ -1,0 +1,11 @@
+// Teste 1 - Variáveis e saída simples
+
+guarda nome = "Marcos";
+guarda idade = 18;
+
+falaai "=== Programa 1 ===";
+falaai "Nome armazenado:";
+falaai nome;
+
+falaai "Idade armazenada:";
+falaai idade;
